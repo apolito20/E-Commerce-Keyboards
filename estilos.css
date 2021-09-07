@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400&display=swap');
+
+*{
+    margin: 0;
+    font-family:'IBM Plex Sans Arabic', sans-serif;
+}
+
+/* navbar */
+
+header{
+    background-color: black;
+}
+
+nav{
+    display: flex;
+}
+
+.logo{
+    height: 100px;
+    width: 400px;    
+}
+
+.menu ul li{
+    display: inline-block;
+    margin-top: 3rem;
+}
+
+.menu ul li a{
+    color: white;
+    text-decoration: none;
+    margin-top: 50px;
+    margin: 20px;
+    padding: 10px 50px;
+}
+
+.menu ul li a:hover {
+    background-color:greenyellow;
+    color: black;
+    border-radius: 10px;
+    transition-duration: 1s;
+}
+
+i{
+    font-size: 30px;
+    color: white;
+    padding: 30px;
+    display: inline-block;
+}
+
+i:hover{
+    color: greenyellow;
+}
+
+/* cards en main */
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.card{
+    margin: 20px;
+    padding: 5px 20px;
+    width: 365px;
+    height: 365px;
+}
+
+p{
+    padding: 10px;
+}
+
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+img{
+    width: 250px;
+    height: 200px;
+}
+
+button {
+    background-color: greenyellow;
+    font-size: 12px;
+    padding: 10px 24px;
+    border: none;
+    transition-duration:0.4s;
+}
+
+button:hover {
+    background-color: green; 
+    color: black;
+}
+
+/* Cuidados */
+#cuidados{
+    height: 500px;
+    width: 50%;
+    padding: 30px;
+    background-color: yellowgreen;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.imgCuidados{
+    margin-left: 750px;
+    margin-bottom: 300px;
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    position: absolute;
+}
+
+
+/* Contacto */
+
+#contacto{
+    height: 400px;
+    background-color: black;
+    color: greenyellow;
+    display: flex;
+}
+
+.btn {
+    font-size: 15px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.col-auto{
+    padding: 15px;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 150px;
+    margin-left: 120px ;
+}
+
+.llamado{
+    position:absolute;
+    margin-top: 250px;
+    margin-left: 40vw;
+}
+
+.tituloFooter{
+    position:absolute;
+    margin-top: 50px;
+    margin-left: 20vw;
+    font-size: 30px;
+}
+
+/* footer */
+
+footer{
+    background-color: black;
+    color: white;
+    
+}
+
+footer p{
+    font-size: 10px;
+    text-align: center;
+}
+
+@media only screen and (min-width 768px){
+
+  
+}
