@@ -2,6 +2,7 @@
 
 *{
     margin: 0;
+    padding: 0;
     font-family:'IBM Plex Sans Arabic', sans-serif;
 }
 
@@ -13,24 +14,29 @@ header{
 
 nav{
     display: flex;
+    height: 200px;
 }
 
 .logo{
-    height: 100px;
-    width: 400px;    
+    height: 50px;
+    width: 200px;    
 }
 
 .menu ul li{
-    display: inline-block;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
+.menu{
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
 .menu ul li a{
+    position: absolute;
     color: white;
     text-decoration: none;
-    margin-top: 50px;
-    margin: 20px;
-    padding: 10px 50px;
+    margin-top: 20px;
+    padding: 10px 20px;
 }
 
 .menu ul li a:hover {
@@ -41,10 +47,10 @@ nav{
 }
 
 i{
-    font-size: 30px;
+    font-size: 20px;
     color: white;
-    padding: 30px;
-    display: inline-block;
+    padding: 20px;
+    float: right;
 }
 
 i:hover{
@@ -63,7 +69,7 @@ main{
 .card{
     margin: 20px;
     padding: 5px 20px;
-    width: 365px;
+    width: 265px;
     height: 365px;
 }
 
@@ -95,34 +101,34 @@ button:hover {
 
 /* Cuidados */
 #cuidados{
-    height: 500px;
-    padding: 30px;
-    width: 50%;
+    height: 700px;
     background-color: yellowgreen;
     color: black;
     display: flex;
+    padding: 20px;
     flex-direction: column;
     align-content: center;
     justify-content: center;
 }
 
 .imgCuidados{
-    margin-left: 750px;
-    margin-bottom: 300px;
-    width: 500px;
-    height: 500px;
+    height: 200px;
+    width: 200px;
     border-radius: 100%;
-    position: absolute;
+    align-self: center;
 }
+
 
 
 /* Contacto */
 
 #contacto{
-    height: 400px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    padding: 20px;
     background-color: black;
     color: greenyellow;
-    display: flex;
 }
 
 .btn {
@@ -134,22 +140,19 @@ button:hover {
 .col-auto{
     padding: 15px;
     display: inline-block;
-    font-size: 20px;
-    margin-top: 150px;
-    margin-left: 120px ;
+    font-size: 16px;
 }
 
 .llamado{
-    position:absolute;
-    margin-top: 250px;
-    margin-left: 40vw;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
 }
 
 .tituloFooter{
-    position:absolute;
-    margin-top: 50px;
-    margin-left: 20vw;
-    font-size: 30px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
 }
 
 /* footer */
@@ -167,19 +170,4 @@ footer p{
 
 @media only screen and (max-width: 768px){
 
-#cuidados{
-    height: 800px;
-    width: 50%;
-
-} 
-
-
-.imgCuidados{
-width: 250px;
-height: 250px;
-}
-
-#contacto{
-    height: 800px;
-}
 }
