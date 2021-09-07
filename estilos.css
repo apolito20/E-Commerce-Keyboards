@@ -165,7 +165,7 @@ footer p{
     text-align: center;
 }
 
-@media only screen and (min-width 768px){
+@media only screen and (min-width: 768px){
 
 #cuidados{
     height: 800px;
