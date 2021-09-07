@@ -9,48 +9,43 @@
 /* navbar */
 
 header{
-    background-color: black;
+    background: #000;
+    height: 100px;
 }
-
-nav{
-    display: flex;
-    height: 200px;
-}
-
 .logo{
     height: 50px;
     width: 200px;    
 }
-
-.menu ul li{
-    margin-top: 2rem;
-}
-
-.menu{
+.top-menu {
     display: flex;
-    flex-direction: column;
-    float: left;
+    justify-content: space-between;
+    align-items: center;
 }
-.menu ul li a{
-    position: absolute;
-    color: white;
+.top-menu i{
+    color:#fff;
+    font-size: 20px;
+    padding: 0 20px;
+}
+.menu-ul{
+    display: flex;
+    justify-content: space-around;
+}
+.menu-ul li a{
+    color:#fff;
     text-decoration: none;
-    margin-top: 20px;
     padding: 10px 20px;
 }
-
-.menu ul li a:hover {
+.menu-ul li a:hover{
     background-color:greenyellow;
     color: black;
     border-radius: 10px;
     transition-duration: 1s;
 }
-
 i{
     font-size: 20px;
     color: white;
     padding: 20px;
-    float: right;
+    
 }
 
 i:hover{
