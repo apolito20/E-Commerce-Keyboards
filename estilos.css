@@ -167,5 +167,12 @@ footer p{
 
 @media only screen and (min-width 768px){
 
+#cuidados{
+    height: 800px;
+}
   
+
+#contacto{
+    height: 800px;
+}
 }
