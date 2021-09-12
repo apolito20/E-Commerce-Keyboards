@@ -9,6 +9,7 @@ let cart = 0;
     
 //funciones
 
+//Esta funcion deberia ir acumulando / sumando la eleccion del teclado y modelo usuario al carrito
 let addToCart = (keyboard, model) => {
     
     if (keyboard === 'Gamer' && model == 1){
@@ -39,6 +40,7 @@ let addToCart = (keyboard, model) => {
 
 }
 
+//esta funcion toma el total del carrito y si es mayor o igual a 400 la compra, le da el importe a abonar con descuento. Si no le pasa el importe total
 let calcularTotal = (cart) =>{
     if (cart >= 400){
         cart = cart - (cart * 1.2);
@@ -49,7 +51,7 @@ let calcularTotal = (cart) =>{
 }
 
 
-
+//funcion para que se ejecuten los prompt, luego la funcion cart y luego la de calcular total.
 do {
     keyboard = prompt('Que Keyboard vas a llevar? Vintage/Clasico/Gamer');
     model = prompt('Que modelo?')
