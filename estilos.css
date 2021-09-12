@@ -163,6 +163,30 @@ footer p{
     text-align: center;
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (min-width: 1024px){
 
+    .menu-ul{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+
+    #cuidados{
+        height: 500px;
+        background-color: yellowgreen;
+        color: black;
+        display: flex;
+        padding: 20px;
+        line-height: 35px;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .imgCuidados{
+        height: 200px;
+        width: 200px;
+        border-radius: 100%;
+        align-self: center;
+    }
 }
