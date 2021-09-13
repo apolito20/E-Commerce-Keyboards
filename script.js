@@ -3,8 +3,9 @@ alert('Hola! Aun no manipulamos el DOM... hagamos una compra por aca');
 alert('Compras de mas de $400, por hoy tienen 20% de dto y envio gratis');
     
 // variables 
-let keyboard = prompt('Que Keyboard vas a llevar? Vintage/Clasico/Gamer');
-let model = prompt('Que modelo?')
+let keyboard = " ";
+let model = " ";
+let respuesta = " ";
 let cart = 0;
     
 //funciones
@@ -43,7 +44,7 @@ let addToCart = (keyboard, model) => {
 //esta funcion toma el total del carrito y si es mayor o igual a 400 la compra, le da el importe a abonar con descuento. Si no le pasa el importe total
 let calcularTotal = (cart) =>{
     if (cart >= 400){
-        cart = cart - (cart * 1.2);
+        cart = cart - (cart * 0.2);
         alert(`Total a abonar con descuento ${cart}`)
         } else{
         alert(`Total a abonar ${cart}`)
@@ -51,14 +52,14 @@ let calcularTotal = (cart) =>{
 }
 
 
-//funcion para que se ejecuten los prompt, luego la funcion cart y luego la de calcular total.
+//bucle para que se ejecuten los prompt, luego la funcion cart y luego la de calcular total.
 do {
     keyboard = prompt('Que Keyboard vas a llevar? Vintage/Clasico/Gamer');
     model = prompt('Que modelo?')
-    addToCart();
+    addToCart(keyboard, model);
     respuesta = prompt('Queres sumar otro Keyboard al carrito? si/no');
     if (respuesta === 'no'){
-        calcularTotal();
+        calcularTotal(cart);
         alert('Hasta luego!');
     }
 } while (respuesta === 'si');
