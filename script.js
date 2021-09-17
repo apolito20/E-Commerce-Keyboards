@@ -1,18 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-
     alert('Hola! Aun no manipulamos el DOM... hagamos una compra por aca');
-
     alert('Compras de mas de $400, por hoy tienen 20% de dto y envio gratis');
         
-    // variables 
-    let keyboard = " ";
-    let model = " ";
-    let respuesta = " ";
+    // acumulador 
     let cart = 0;
-        
-    //funciones
-    
+
+    //funciones    
     //Esta funcion deberia ir acumulando / sumando la eleccion del teclado y modelo usuario al carrito
     let addToCart = (keyboard, model) => {
         
@@ -57,10 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     //bucle para que se ejecuten los prompt, luego la funcion cart y luego la de calcular total.
     do {
-        keyboard = prompt('Que Keyboard vas a llevar? Vintage/Clasico/Gamer');
-        model = prompt('Que modelo?')
+        let keyboard = prompt('Que Keyboard vas a llevar? Vintage/Clasico/Gamer') ;
+        let model = prompt('Que modelo?')
         addToCart(keyboard, model);
-        respuesta = prompt('Queres sumar otro Keyboard al carrito? si/no');
+        let respuesta = prompt('Queres sumar otro Keyboard al carrito? si/no');
         if (respuesta === 'no'){
             calcularTotal(cart);
             alert('Hasta luego!');
@@ -69,5 +62,36 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     
+
+    //Objetos 
+    class Productos {
+        constructor(keyboard, model, price){
+            this.keyboard = keyboard;
+            this.model = model;
+            this.price = number(price);
+            this.stock = 10;
+        }
+
+        vender (){
+            let cantidad = prompt('cuantos queres?')
+            if (cantidad>= this.stock){
+                alert('tenemos stock');
+                
+            }else{
+                alert('no hay stock suficiente');
+            }
+        }
+
+    }
+
+    const VintageUno = new Productos (keyboard, model, '$319.99');
+    const VintageDos = new Productos (keyboard, model, '$219.99');
+    const VintageTres = new Productos (keyboard, model, '$189.99');
+    const GamerUno = new Productos (keyboard, model, '$199.99');
+    const GamerDos = new Productos (keyboard, model, '$150');
+    const GamerTres = new Productos (keyboard, model, '$119.99');
+    const Clasico = new Productos (keyboard, model, '$419.99');
+
+
 
 })
