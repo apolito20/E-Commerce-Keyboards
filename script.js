@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Tenemos stock disponible');
                 cart += this.price * cantidad;
                 this.stock -= cantidad;
-                console.log(cart, this.stock)
+                console.log(cart, this.stock);
                 return cart;
             }else{
                 alert('Discula, no hay stock suficiente, prueba menos cantidad');
@@ -22,8 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-    }
-
+    };
     
     const vintageUno = new Productos ('Vintage', '1', 319.99, 10);
     const vintageDos = new Productos ('Vintage', '2', 219.99, 10);
@@ -37,39 +36,41 @@ document.addEventListener('DOMContentLoaded', () => {
     // acumulador 
     let cart = 0;
     let respuesta = "";
+    let products = [];
+
+    products.push(vintageUno, gamerUno, gamerDos, gamerTres, clasico, vintageDos, vintageTres);
+
+    products.sort((a, b) => {
+        if (a.price < b.price){
+            return -1;
+        }else if (a.price > b.price){
+            return 1;
+        } else{
+            return 0;
+        }
+    });
+    
+    console.log(products);
 
     //funciones    
+   
     //Esta funcion deberia ir acumulando / sumando la eleccion del teclado y modelo usuario al carrito
+
     let addToCart = (keyboard, model, cart, cantidad) => {
-        
-        if (keyboard === 'Gamer' && model == 1){
-            cart = gamerUno.vender(cantidad, cart);
-            alert(`llevas gastado ${cart}`)
-        } else if (keyboard === 'Gamer' && model == 2){
-            cart = gamerDos.vender(cantidad, cart);
-            alert(`llevas gastado ${cart}`)
-        } else if (keyboard === 'Gamer' && model == 3){
-            cart = gamerTres.vender(cantidad, cart);
-            alert(`llevas gastado ${cart}`)
-        }else if (keyboard === 'Vintage' && model == 1){
-            cart = vintageUno.vender(cantidad, cart);
-            alert(`llevas gastado ${cart}`)
-        }else if (keyboard === 'Vintage' && model == 2){
-            cart = vintageDos.vender(cantidad, cart);
-            alert(`llevas gastado ${cart}`)
-        }else if (keyboard === 'Vintage' && model == 3){
-            cart = vintageTres.vender(cantidad, cart);
-            alert(`llevas gastado ${cart}`)
-        }else if (keyboard === 'Clasico' && model == 1){
-            cart = clasico.vender(cantidad, cart); 
-            alert(`llevas gastado ${cart}`)
-        } else {
+        // usar FIND 
+        const productoElegido = products.find((producto)=>producto.keyboard === keyboard && producto.model === model);
+        cart = productoElegido.vender(cantidad, cart);
+        console.log(productoElegido);
+        if(cart > 0){
+        alert(`llevas gastado ${cart}`)
+        }else{
             alert('No tenemos ese modelo');
         }
-          return cart;
-    
+        return cart;
     };
-    
+
+
+
     //esta funcion toma el total del carrito y si es mayor o igual a 400 la compra, le da el importe a abonar con descuento. Si no le pasa el importe total
     let calcularTotal = (cart) =>{
         if (cart >= 400){
@@ -80,6 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
     }
     
+
+    //esta funcion me permite consumir la data que se encuentra dentro del array
+
     
     alert('Hola! Aun no manipulamos el DOM... hagamos una compra por aca');
     alert('Compras de mas de $400, por hoy tienen 20% de dto y envio gratis');
