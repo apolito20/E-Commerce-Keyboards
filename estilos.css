@@ -1,17 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
 *{
     margin: 0;
     padding: 0;
     font-family:'IBM Plex Sans Arabic', sans-serif;
+    scroll-behavior: smooth;
 }
 
+body{
+    background-color: white;
+    
+}
 /* navbar */
 
 header{
     background: #000;
-    height: 100px;
+    height: 700px;
+
 }
+
+nav{
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.contenedor h1{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    font-family: 'Lato', sans-serif;
+}
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.contenedor img{
+    height: 500px;
+    width: 100vw;
+
+}
+
 .logo{
     height: 50px;
     width: 200px;    
@@ -20,6 +55,8 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+   
 }
 .top-menu i{
     color:#fff;
@@ -36,7 +73,7 @@ header{
     padding: 10px 20px;
 }
 .menu-ul li a:hover{
-    background-color:greenyellow;
+    background-color:teal;
     color: black;
     border-radius: 10px;
     transition-duration: 1s;
@@ -49,12 +86,13 @@ i{
 }
 
 i:hover{
-    color: greenyellow;
+    color: teal;
 }
 
 /* cards en main */
 
 main{
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -82,7 +120,7 @@ img{
 }
 
 button {
-    background-color: greenyellow;
+    background-color: teal;
     font-size: 12px;
     padding: 10px 24px;
     border: none;
@@ -90,14 +128,14 @@ button {
 }
 
 button:hover {
-    background-color: green; 
+    background-color: crimson; 
     color: black;
 }
 
 /* Cuidados */
 #cuidados{
     height: 700px;
-    background-color: yellowgreen;
+    background-color: teal;
     color: black;
     display: flex;
     padding: 20px;
@@ -113,6 +151,13 @@ button:hover {
     align-self: center;
 }
 
+section h2{
+    text-align: center;
+    font-size: 50px;
+    padding: 30px
+    
+}
+
 
 
 /* Contacto */
@@ -123,7 +168,7 @@ button:hover {
     height: 300px;
     padding: 20px;
     background-color: black;
-    color: greenyellow;
+    color: teal;
 }
 
 .btn {
@@ -173,7 +218,7 @@ footer p{
 
     #cuidados{
         height: 500px;
-        background-color: yellowgreen;
+        background-color: teal;
         color: black;
         display: flex;
         padding: 20px;

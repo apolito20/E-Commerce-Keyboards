@@ -85,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //esta funcion me permite consumir la data que se encuentra dentro del array
 
     
-    alert('Hola! Aun no manipulamos el DOM... hagamos una compra por aca');
     alert('Compras de mas de $400, por hoy tienen 20% de dto y envio gratis');
 
     
@@ -103,5 +102,19 @@ document.addEventListener('DOMContentLoaded', () => {
     } while (respuesta === 'si');
     
     
+
+
+    //Agregamos los productos al carrito
+    let contenedor = document.createElement("div");
+
+    for (const producto of products) {
+        let contenedor = document.createElement("div");
+        //Definimos el innerHTML del elemento con una plantilla de texto
+        contenedor.innerHTML = `<h3> Nombre: ${producto.keyboard}</h3>
+                                <p>  Modelo: ${producto.model}</p>
+                                <b> $ ${producto.price}</b>`;
+        document.body.appendChild(contenedor);
+    
+    }
 
 })
